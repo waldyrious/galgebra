@@ -15,8 +15,11 @@ A = o3d.mv('A', 'vector', f=True)
 dd = v | o3d.grad
 lap = o3d.grad * o3d.grad
 print(r'\bm{X} =', X)
+print(r'\bm{X} \cdot \bm{X} =', X | X)
 print(r'\bm{v} =', v)
+print(r'\bm{v} \cdot \bm{v} =', v | v)
 print(r'\bm{A} =', A)
+print(r'\bm{A} \cdot \bm{A} =', A | A)
 print(r'%\bm{v}\cdot\nabla =', dd)
 print(r'%\nabla^{2} =', lap)
 print(r'%\bm{v}\cdot\nabla f =', dd * f)
