@@ -1,0 +1,60 @@
+
+\documentclass[10pt,fleqn]{report}
+\usepackage[vcentering]{geometry}
+\geometry{papersize={8in,9in},total={7in,8in}}
+
+\pagestyle{empty}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{tensor}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{breqn}
+\definecolor{gray}{rgb}{0.95,0.95,0.95}
+\setlength{\parindent}{0pt}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Adj}{Adj}
+\newcommand{\bfrac}[2]{\displaystyle\frac{#1}{#2}}
+\newcommand{\lp}{\left (}
+\newcommand{\rp}{\right )}
+\newcommand{\paren}[1]{\lp {#1} \rp}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\llt}{\left <}
+\newcommand{\rgt}{\right >}
+\newcommand{\abs}[1]{\left |{#1}\right | }
+\newcommand{\pdiff}[2]{\bfrac{\partial {#1}}{\partial {#2}}}
+\newcommand{\lbrc}{\left \{}
+\newcommand{\rbrc}{\right \}}
+\newcommand{\W}{\wedge}
+\newcommand{\prm}[1]{{#1}'}
+\newcommand{\ddt}[1]{\bfrac{d{#1}}{dt}}
+\newcommand{\R}{\dagger}
+\newcommand{\deriv}[3]{\bfrac{d^{#3}#1}{d{#2}^{#3}}}
+\newcommand{\grade}[1]{\left < {#1} \right >}
+\newcommand{\f}[2]{{#1}\lp{#2}\rp}
+\newcommand{\eval}[2]{\left . {#1} \right |_{#2}}
+\newcommand{\Nabla}{\boldsymbol{\nabla}}
+\newcommand{\eb}{\boldsymbol{e}}
+\usepackage{float}
+\floatstyle{plain} % optionally change the style of the new float
+\newfloat{Code}{H}{myc}
+\lstloadlanguages{Python}
+
+\begin{document}
+\begin{equation*} \mbox{Python version = } 3 \cdot 4 \cdot 3 |Anaconda 2 \cdot 3 \cdot 0 (32-bit)| (default, Mar  6 2015, 12:08:17) [MSC v \cdot 1600 32 bit (Intel)] \end{equation*}
+\begin{equation*} \bm{a} =  a^{t}  \boldsymbol{e}_{t} + a^{x}  \boldsymbol{e}_{x} + a^{y}  \boldsymbol{e}_{y} + a^{z}  \boldsymbol{e}_{z} \end{equation*}
+  \begin{align*} \bm{M} =  & M   \\  &  + M^{t}  \boldsymbol{e}_{t} + M^{x}  \boldsymbol{e}_{x} + M^{y}  \boldsymbol{e}_{y} + M^{z}  \boldsymbol{e}_{z} \\  &  + M^{tx}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x} + M^{ty}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{y} + M^{tz}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{z} + M^{xy}  \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y} + M^{xz}  \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{z} + M^{yz}  \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z} \\  &  + M^{txy}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y} + M^{txz}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{z} + M^{tyz}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z} + M^{xyz}  \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z} \\  &  + M^{txyz}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z}  \end{align*} 
+\begin{equation*} \bm{a} \bm{a} = a^{t} ^2 - a^{x} ^2 - a^{y} ^2 - a^{z} ^2 \end{equation*}
+  \begin{align*} \bm{a}^{-1} =  & \frac{a^{t} }{a^{t} ^2 - a^{x} ^2 - a^{y} ^2 - a^{z} ^2} \boldsymbol{e}_{t} \\  &  + \frac{a^{x} }{a^{t} ^2 - a^{x} ^2 - a^{y} ^2 - a^{z} ^2} \boldsymbol{e}_{x} \\  &  + \frac{a^{y} }{a^{t} ^2 - a^{x} ^2 - a^{y} ^2 - a^{z} ^2} \boldsymbol{e}_{y} \\  &  + \frac{a^{z} }{a^{t} ^2 - a^{x} ^2 - a^{y} ^2 - a^{z} ^2} \boldsymbol{e}_{z}  \end{align*} 
+\begin{equation*} \langle \bm{M} \rangle _1 \langle \bm{M} \rangle _1 = M^{t} ^2 - M^{x} ^2 - M^{y} ^2 - M^{z} ^2 \end{equation*}
+  \begin{align*} \langle \bm{M} \rangle _1 ^{-1} =  & \frac{M^{t} }{M^{t} ^2 - M^{x} ^2 - M^{y} ^2 - M^{z} ^2} \boldsymbol{e}_{t} \\  &  + \frac{M^{x} }{M^{t} ^2 - M^{x} ^2 - M^{y} ^2 - M^{z} ^2} \boldsymbol{e}_{x} \\  &  + \frac{M^{y} }{M^{t} ^2 - M^{x} ^2 - M^{y} ^2 - M^{z} ^2} \boldsymbol{e}_{y} \\  &  + \frac{M^{z} }{M^{t} ^2 - M^{x} ^2 - M^{y} ^2 - M^{z} ^2} \boldsymbol{e}_{z}  \end{align*} 
+\begin{equation*} \langle \bm{M} \rangle _3 = M^{txy}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y} + M^{txz}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{z} + M^{tyz}  \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z} + M^{xyz}  \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z} \end{equation*}
+\begin{equation*} \langle \bm{M} \rangle _3 \langle \bm{M} \rangle _3 = - M^{txy} ^2 - M^{txz} ^2 - M^{tyz} ^2 + M^{xyz} ^2 \end{equation*}
+  \begin{align*} \langle \bm{M} \rangle _3^{-1} =  & - \frac{M^{txy} }{M^{txy} ^2 + M^{txz} ^2 + M^{tyz} ^2 - M^{xyz} ^2} \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y} \\  &  - \frac{M^{txz} }{M^{txy} ^2 + M^{txz} ^2 + M^{tyz} ^2 - M^{xyz} ^2} \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{z} \\  &  - \frac{M^{tyz} }{M^{txy} ^2 + M^{txz} ^2 + M^{tyz} ^2 - M^{xyz} ^2} \boldsymbol{e}_{t}\wedge \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z} \\  &  - \frac{M^{xyz} }{M^{txy} ^2 + M^{txz} ^2 + M^{tyz} ^2 - M^{xyz} ^2} \boldsymbol{e}_{x}\wedge \boldsymbol{e}_{y}\wedge \boldsymbol{e}_{z}  \end{align*} 
+
+\end{document}
