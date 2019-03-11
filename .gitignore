@@ -115,3 +115,9 @@ doc/_build
 doc/python/*.tex
 doc/python/*.aux
 doc/python/*.bak.pdf
+
+# Generated .tex
+examples/LaTeX/*.tex
+
+# Mac
+.DS_Store
