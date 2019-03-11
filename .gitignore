@@ -118,6 +118,8 @@ doc/python/*.bak.pdf
 
 # Generated .tex
 examples/LaTeX/*.tex
+examples/LaTeX/*.aux
+examples/LaTeX/*.log
 
 # Mac
 .DS_Store
